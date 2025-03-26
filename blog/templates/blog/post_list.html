@@ -1,0 +1,11 @@
+<h1>Blog Posts</h1>
+
+<!-- Link to create a new post -->
+<a href="{% url 'post_create' %}">New Post</a>
+
+<ul>
+    {% for post in posts %}
+        <!-- Link to post details -->
+        <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
+    {% endfor %}
+</ul>
